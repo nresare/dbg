@@ -11,4 +11,4 @@ https://creativecommons.org/share-your-work/public-domain/cc0/
 * If you haven't done so before, set up the buildx builder with `docker buildx create --use`
 * Build the image with `docker buildx build --platform linux/amd64,linux/arm64 .`
 * To build and push an image to the repo, make sure you `docker login` successfully, then use
-  `docker buildx build --platform linux/amd64,linux/arm64 -t ${REPO}/dbg:${VERSION} -t ${REPO}/dbg:latest --push`
+  `docker buildx build --platform linux/amd64,linux/arm64 -t ${REPO}/dbg:${VERSION} -t ${REPO}/dbg:latest --push .`
