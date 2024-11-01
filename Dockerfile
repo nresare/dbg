@@ -7,4 +7,6 @@ RUN addgroup -g 10001 -S unprivileged && \
 
 RUN echo "permit nopass unprivileged" > /etc/doas.conf
 USER 10001:10001
-ENTRYPOINT ["/bin/zsh"]
+
+COPY ./entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
